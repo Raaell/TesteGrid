@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <div class="container py-3" style="font-size:small;">
+        @{
+            Html.RenderAction("AtualizaGrid", "Home", new { pesquisa = "", pagina = 0, range = 0 });
+        }
+    </div>
+</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+@*<script> function AtualizaGrid() { $('#tabgrid').load('/Home/AtualizaGrid/', { pesquisa: $('#txtpesquisar').val(), pagina: parseInt($('#pagina').val() - 1), range: $('#selectrange').val() }, function (r, s, x) { if (s == 'error') { alert("erro"); } }); } $('#btnpesquisar').click(function (e) { e.defaultPrevented = true; AtualizaGrid(); }); $('#selectrange').change(AtualizaGrid); $('#tabgrid').on('change', '#pagina', function () { if (parseInt($(this).val() - 1) > 0) { AtualizaGrid(); } else {  $(this).val(1); } }); $('#tabgrid').on('click', '#btnprimeiro', function () { $('#tabgrid').load('/Home/AtualizaGrid/', { pesquisa: $('#txtpesquisar').val(), pagina: 0, range: $('#selectrange').val() }, function (r, s, x) { if (s == 'error') { alert("erro"); } }); }); $('#tabgrid').on('click', '#btnanterior', function () { $('#tabgrid').load('/Home/AtualizaGrid/', { pesquisa: $('#txtpesquisar').val(), pagina: parseInt($('#pagina').val() - 2), range: $('#selectrange').val() }, function (r, s, x) { if (s == 'error') { alert("erro"); } }); }); $('#tabgrid').on('click', '#btnproximo', function () { $('#tabgrid').load('/Home/AtualizaGrid/', { pesquisa: $('#txtpesquisar').val(), pagina: parseInt($('#pagina').val()), range: $('#selectrange').val() }, function (r, s, x) { if (s == 'error') { alert("erro"); } }); }); $('#tabgrid').on('click', '#btnultimo', function () { $('#tabgrid').load('/Home/AtualizaGrid/', { pesquisa: $('#txtpesquisar').val(), pagina: parseInt($('#pagina').attr('ultima')), range: $('#selectrange').val() }, function (r, s, x) { if (s == 'error') { alert("erro"); } }); });</script>*@
